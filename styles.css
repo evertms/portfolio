@@ -4,18 +4,18 @@ html {
 
 /* Reset básico */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 body {
-font-family: 'Inter', sans-serif;
-color: #000;
-line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    line-height: 1.6;
 }
 
 /* Encabezado */
@@ -56,73 +56,363 @@ nav {
     font-weight: 500;
 }
 
-/* Sección Hero */
-#hero {
-background-color: #fff;
-padding: 100px 0;
-display: flex;
-gap: 20px;
+/* Sección home */
+#home {
+    background-color: #fff;
+    min-height: calc(100vh - 81px); /* Altura total de la ventana menos el header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-max-width: 1440px;
-margin: 0 auto;
-padding: 0 100px;
-display: flex;
-gap: 20px;
-align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
 }
 
-.hero-content {
-flex: 1;
+.home-content {
+    text-align: center;
+    max-width: 800px; /* Limitar el ancho máximo para mejor legibilidad */
+    margin: 0 auto;
 }
 
-.hero-content h1 {
-font-size: 40px;
-margin-bottom: 0;
-line-height: 1;
+.home-content h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
-.hero-content h2 {
-font-size: 3rem;
-font-weight: 600;
-margin-bottom: 44px;
-line-height: 1;
+.home-content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 44px;
+    line-height: 1;
 }
 
-.hero-content p {
-font-size: 1.1rem;
-line-height: 30px;
-}
-
-.hero-image {
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.hero-image img {
-width: 100%;
-max-width: 400px;
-height: auto;
-aspect-ratio: 1/1;
-object-fit: cover;
+.home-content p {
+    font-size: 1.1rem;
+    line-height: 30px;
 }
 
 /* Diseño responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Botón hamburguesa - oculto por defecto */
+.menu-toggle {
+    display: none;
+}
+
+/* Sección Proyectos */
+#projects {
+    padding: 80px 0;
+}
+
+#projects h2 {
+    font-size: 48px;
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.project-card {
+    flex: 1;
+    text-align: center;
+}
+
+.project-card h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Sección Blog */
+#blog {
+    padding: 80px 0;
+}
+
+#blog h2 {
+    font-size: 48px;
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+
+.blog-grid {
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    flex: 1;
+    text-align: center;
+}
+
+.blog-card h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.blog-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Sección Acerca de mí */
+#about {
+    padding: 80px 0;
+}
+
+#about h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+#about h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+#about h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#about p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#about ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#about li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.about-content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Responsive para la sección about */
+@media (max-width: 768px) {
+    
+}
+
+/* Actualizar el responsive para incluir blog */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    /* Mostrar el botón hamburguesa solo en móvil */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 4px;
+        width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     .container {
         flex-direction: column;
         padding: 20px;
         text-align: center;
     }
 
-    .hero-content {
+    .home-content {
         margin-bottom: 2rem;
     }
 
-    .hero-image img {
+    .home-image img {
         max-width: 300px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    #projects h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .blog-grid {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    #blog h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    #about h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    #about h3 {
+        font-size: 28px;
+    }
+
+    #about h4 {
+        font-size: 20px;
+    }
+}
+
+/* Sección Contacto */
+#contact {
+    padding: 80px 0;
+}
+
+#contact h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#contact > .container > p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact-form-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 40px 24px;
+    margin-top: 40px;
+}
+
+.contact-form-container h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #000;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #B3B3B3;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.contact-form button:hover {
+    background: #333;
+}
+
+/* Responsive para la sección contacto */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 36px;
+    }
+
+    .contact-form-container {
+        padding: 24px 16px;
     }
 }
