@@ -1,0 +1,63 @@
+.about {
+    padding: 80px 0;
+}
+
+.about__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.about__content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about__section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.about__subsection-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.about__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about__list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.about__list-item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .about__title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .about__section-title {
+        font-size: 28px;
+    }
+
+    .about__subsection-title {
+        font-size: 20px;
+    }
+}
