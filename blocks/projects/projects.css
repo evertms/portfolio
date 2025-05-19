@@ -1,0 +1,46 @@
+.projects {
+    padding: 80px 0;
+}
+
+.projects__title {
+    font-size: 48px;
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+
+.projects__grid {
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.projects__card {
+    flex: 1;
+    text-align: center;
+}
+
+.projects__card-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projects__card-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .projects__grid {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .projects__title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+}
