@@ -1,0 +1,175 @@
+.home {
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  padding: 0 108px;
+  padding-top: 100px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.home__text-content {
+  grid-column: 1 / span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__title {
+  font-family: var(--font-bebas);
+  font-size: 101px;
+  color: var(--text-color-primary);
+  line-height: 1; 
+  margin: 0 0 8px 0;
+}
+
+.home__description {
+  font-family: var(--font-manrope);
+  font-size: 18px;
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 0 40px 0;
+}
+
+.home__actions {
+  display: flex;
+  align-items: center;
+}
+
+.home__button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.home__button--contact {
+  background-color: var(--button-contact-bg);
+  color: var(--button-contact-text);
+  font-family: var(--font-manrope);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 24px;
+  height: 54px;
+  width: 187px;
+  margin-right: 16px;
+}
+
+.home__button-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--button-contact-dot);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.home__icon-link {
+  background-color: var(--icon-bg);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.home__icon-link:last-child {
+  margin-right: 0;
+}
+
+.home__icon-link svg {
+  width: 26px;
+  height: 26px;
+}
+
+.home__icon-link svg path {
+  fill: var(--icon-color);
+}
+
+.home__image-container {
+  grid-column: 7 / -1;
+  background-color: #d9d9d9;
+  height: 600px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .home__text-content {
+    grid-column: 1 / -1;
+    align-items: center;
+  }
+
+  .home__title {
+    font-size: 70px;
+  }
+
+  .home__description {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  .home__actions {
+    justify-content: center;
+  }
+
+  .home__image-container {
+    grid-column: 1 / -1;
+    margin-top: 40px;
+    height: 400px;
+  }
+
+  .header {
+    padding: 15px 30px;
+  }
+
+  .header__logo {
+    font-size: 24px;
+  }
+
+  /*.header__nav-list {
+    /* Aquí podrías implementar un menú hamburguesa para móviles
+  }*/
+
+  .header__nav-item {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+    .home__title {
+        font-size: 50px;
+    }
+    .home__description {
+        font-size: 14px;
+    }
+    .home__button--contact {
+        width: 160px;
+        height: 48px;
+        font-size: 14px;
+    }
+    .home__icon-link {
+        width: 48px;
+        height: 48px;
+    }
+    .home__icon-link svg {
+        width: 22px;
+        height: 22px;
+    }
+}

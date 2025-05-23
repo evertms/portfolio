@@ -1,0 +1,39 @@
+@import url('./vendor/normalize.css');
+@import url('./blocks/header/header.css');
+@import url('./blocks/home/home.css');
+@import url('./blocks/blog/blog.css');
+
+:root {
+  --background-color: #0a0a0a;
+  --font-bebas: 'Bebas Neue', cursive;
+  --font-inter: 'Inter', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #c7c7c7;
+  
+  --button-contact-bg: #d3e97a;
+  --button-contact-text: #0a0a0a;
+  --button-contact-dot: #0a0a0a;
+
+  --icon-bg: #222222;
+  --icon-color: #d3e97a;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color-secondary);
+  font-family: var(--font-manrope);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.main-content {
+    max-width: 1440px;
+    margin: 0 auto;
+}

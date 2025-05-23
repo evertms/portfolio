@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evert Moreno - Portfolio</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="./index.js" type="module"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <span class="header__logo-text">EVERT MORENO</span>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li><a href="/#home" class="header__nav-link header__nav-link--active">Home</a></li>
+                <li><a href="/#blog" class="header__nav-link">Blogs</a></li>
+                <li><a href="/#work" class="header__nav-link">Work</a></li>
+                <li><a href="/#about" class="header__nav-link">About me</a></li>
+                <li><a href="/#contact" class="header__nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
+        
+    </main>
+
+    <template id="home-template">
+        <section class="home">
+            <div class="home__text-content">
+                <h1 class="home__title">HI, I AM<br>EVERT MORENO.</h1>
+                <p class="home__description">
+                    A Software Engineering aspiring to be a back-end developer 
+                    passionate about design patterns, SOLID principles and software 
+                    architecture.
+                </p>
+                <div class="home__actions">
+                    <a href="#" class="home__button home__button--contact">
+                        CONTACT ME <span class="home__button-dot"></span>
+                    </a>
+                    <a href="#" class="home__icon-link" aria-label="LinkedIn">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.39825 7.79682C6.70735 7.79682 7.76858 6.73558 7.76858 5.42649C7.76858 4.11739 6.70735 3.05615 5.39825 3.05615C4.08915 3.05615 3.02792 4.11739 3.02792 5.42649C3.02792 6.73558 4.08915 7.79682 5.39825 7.79682Z" fill="#D3E97A"/>
+                            <path d="M10.0068 9.59282V22.7434H14.0898V16.2402C14.0898 14.5242 14.4127 12.8623 16.5403 12.8623C18.6388 12.8623 18.6648 14.8242 18.6648 16.3485V22.7445H22.75V15.5327C22.75 11.9902 21.9873 9.26782 17.8468 9.26782C15.8589 9.26782 14.5264 10.3587 13.9815 11.3912H13.9263V9.59282H10.0068ZM3.35292 9.59282H7.4425V22.7434H3.35292V9.59282Z" fill="#D3E97A"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="home__icon-link" aria-label="GitHub">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0282 2.16675C7.06008 2.16675 2.223 7.00383 2.223 12.9719C2.223 17.7451 5.31808 21.7957 9.61242 23.2257C10.153 23.3232 10.348 22.9906 10.348 22.7046C10.348 22.4478 10.3393 21.7675 10.3361 20.8673C7.32983 21.5194 6.695 19.4178 6.695 19.4178C6.20533 18.1698 5.49575 17.8372 5.49575 17.8372C4.51533 17.1666 5.5705 17.1818 5.5705 17.1818C6.656 17.2576 7.22475 18.2954 7.22475 18.2954C8.18892 19.9464 9.75542 19.4698 10.3686 19.1935C10.4672 18.4948 10.7488 18.0181 11.0565 17.7483C8.658 17.4764 6.136 16.5491 6.136 12.4075C6.136 11.2299 6.55742 10.2636 7.24533 9.50958C7.13592 9.2355 6.76217 8.13592 7.35258 6.64958C7.35258 6.64958 8.25933 6.35817 10.3231 7.75567C11.2045 7.51589 12.1137 7.3935 13.0271 7.39167C13.9405 7.39315 14.8498 7.51554 15.7311 7.75567C17.7959 6.35708 18.7016 6.64958 18.7016 6.64958C19.292 8.13592 18.9215 9.2355 18.8088 9.50958C19.5022 10.2636 19.9182 11.2288 19.9182 12.4075C19.9182 16.5599 17.394 17.4721 14.9868 17.7397C15.3714 18.0733 15.7181 18.732 15.7181 19.7395C15.7181 21.1847 15.7051 22.3503 15.7051 22.7046C15.7051 22.9938 15.8979 23.3297 16.4493 23.2235C20.7415 21.7913 23.8333 17.744 23.8333 12.9719C23.8333 7.00383 18.9963 2.16675 13.0282 2.16675Z" fill="#D3E97A"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="home__image-container">
+                
+            </div>
+        </section>
+    </template>
+
+    <template id="blog-template">
+        <section class="blog-section">
+            <header class="blog-section__header">
+                <h2 class="blog-section__title">BLOG</h2>
+                <p class="blog-section__description">
+                    Here are articles related to the development and, of course, 
+                    written by me
+                </p>
+            </header>
+            <div class="blog-list">
+                <article class="blog-card">
+                    <div class="blog-card__image-container">
+                        <img src="assets/blog1.jpeg" alt="Blog 1 image" class="blog-card__image">
+                    </div>
+                    <div class="blog-card__content">
+                        <h3 class="blog-card__subtitle">La divitis</h3>
+                        <p class="blog-card__description">"Divitis", esa enfermedad silenciosa de los principiantes en desarrollo frontend (y cómo combatirla)
+                            Si estás estudiando desarrollo web —como es mi caso en estos días— probablemente ya hayas escuchado hablar de ese mal común entre los desarrolladores novatos: la “divitis”.
+                            </p>
+                        <div class="blog-card__actions">
+                            <div class="blog-card__action-group">
+                                <button class="blog-card__icon-button blog-card__icon-button--like" aria-label="Like this post">
+                                    <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 22L22 4C23.5913 4 25.1174 4.63214 26.2426 5.75736C27.3679 6.88258 28 8.4087 28 10V18H39.32C39.8998 17.9934 40.4741 18.113 41.0031 18.3504C41.5322 18.5879 42.0032 18.9375 42.3837 19.375C42.7642 19.8126 43.045 20.3276 43.2067 20.8845C43.3683 21.4414 43.407 22.0267 43.32 22.6L40.56 40.6C40.4154 41.5538 39.9309 42.4232 39.1958 43.048C38.4608 43.6728 37.5247 44.0109 36.56 44H14M14 22V44M14 22H8C6.93913 22 5.92172 22.4214 5.17157 23.1716C4.42143 23.9217 4 24.9391 4 26V40C4 41.0609 4.42143 42.0783 5.17157 42.8284C5.92172 43.5786 6.93913 44 8 44H14" stroke="#D3E97A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="blog-card__icon-button blog-card__icon-button--bookmark" aria-label="Bookmark this post">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M38 42L24 32L10 42V10C10 8.93913 10.4214 7.92172 11.1716 7.17157C11.9217 6.42143 12.9391 6 14 6H34C35.0609 6 36.0783 6.42143 36.8284 7.17157C37.5786 7.92172 38 8.93913 38 10V42Z" stroke="#D3E97A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7328610145553268737/" class="blog-card__read-full">
+                                <span class="blog-card__read-full-content">
+                                    READ FULL
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_210_384_card_blog1)"> 
+                                        <path d="M5.49048 17.6161L14.9448 8.16172L14.9448 15.0234L16.7779 15.0234L16.7779 5.0323L6.78684 5.0323L6.78684 6.86536L13.6485 6.86536L4.19412 16.3197L5.49048 17.6161Z" fill="#D3E97A"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_210_384_card_blog1">
+                                        <rect width="22" height="22" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span class="blog-card__read-full-line"></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </template>
+</body>
+</html>
