@@ -89,8 +89,10 @@
     fill: none;
 }
 
-.blog-card__icon-button--like svg path {
-    fill: none;
+.blog-card__icon-button--like.active svg path,
+.blog-card__icon-button--bookmark.active svg path {
+    fill: var(--icon-color);
+    stroke: var(--icon-color);
 }
 
 .blog-card__read-full {

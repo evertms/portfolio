@@ -1,3 +1,5 @@
+import { stateService } from './StateService.js';
+
 export const Router = {
   init: () => {
       document.querySelectorAll('.header__nav-link').forEach((a) => {
@@ -54,5 +56,6 @@ export const Router = {
     }
 
     window.scrollTo(0, 0);
-  },
+    stateService.notifyAll();
+    }, 
 };
