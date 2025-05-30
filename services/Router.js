@@ -30,7 +30,6 @@ export const Router = {
           pageContent = document.getElementById('home-template').content.cloneNode(true);
           break;
       case '/blog':
-          //pageContent = document.getElementById('blog-template').content.cloneNode(true);
           pageContent = document.createElement('blog-page');
           break;
       case '/contact':
