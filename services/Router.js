@@ -33,7 +33,9 @@ export const Router = {
           //pageContent = document.getElementById('blog-template').content.cloneNode(true);
           pageContent = document.createElement('blog-page');
           break;
-      
+      case '/contact':
+          pageContent = document.createElement('contact-form');
+          break;
       default:
         console.warn(`Ruta no encontrada: ${route}. Redirigiendo a Home.`);
         pageContent = document.getElementById('home-template').content.cloneNode(true);

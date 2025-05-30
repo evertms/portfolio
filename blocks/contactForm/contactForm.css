@@ -1,0 +1,160 @@
+/* contactForm.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contact-form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 108px 108px; /* Márgenes laterales */
+  background-color: #000;
+  color: #fff;
+}
+
+.contact-form__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* --------------------------- */
+/* Columna Izquierda */
+/* --------------------------- */
+
+.contact-form__left {
+  width: calc(50% - 12px); /* Compensación por el gap */
+}
+
+.contact-form__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 76px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.contact-form__description {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  color: #c7c7c7;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-form__link {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #d3e97a;
+}
+
+.contact-form__link + .contact-form__link {
+  margin-left: 8px;
+}
+
+.contact-form__social {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-form__social-link {
+  color: #ffffff;
+}
+
+.contact-form__social-link svg path,
+.contact-form__social-link svg g {
+  stroke: #d3e97a;
+  fill: #d3e97a ;
+}
+
+/* --------------------------- */
+/* Columna Derecha */
+/* --------------------------- */
+
+.contact-form__right {
+  width: calc(50% - 12px);
+}
+
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Campos del formulario */
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form__label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #c7c7c7;
+}
+
+.contact-form__input {
+  padding: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #1a1a1a;
+  color: #c7c7c7;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  resize: vertical;
+  width: 100%;
+}
+
+.contact-form__input--text {
+  height: 51px;
+}
+
+.contact-form__input--textarea {
+  height: 156px;
+  overflow: auto;
+}
+
+.contact-form__field--error .contact-form__input {
+  border-color: #ff4d4d;
+  background-color: #2a1a1a;
+}
+
+.contact-form__field--error .contact-form__error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.contact-form__error-message {
+  display: none;
+  font-size: 14px;
+  color: #ff4d4d;
+  margin-top: -8px;
+  margin-bottom: 24px;
+}
+
+/* Botón Submit */
+.contact-form__submit {
+  align-self: flex-start;
+  width: 140px;
+  height: 54px;
+  background-color: #d3e97a;
+  border: none;
+  border-radius: 100px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form__submit:hover {
+  background-color: #c2d46b;
+}
