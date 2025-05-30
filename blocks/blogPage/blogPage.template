@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="/blocks/blogPage/blogPage.css">
+<section class="blog-section">
+    <header class="blog-section__header">
+        <h2 class="blog-section__title">BLOG</h2>
+        <p class="blog-section__description">
+            Here are articles related to the development and, of course, written by me
+        </p>
+    </header>
+    <div class="blog-list" id="blog-list"></div>
+</section>

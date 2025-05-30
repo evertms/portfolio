@@ -1,0 +1,29 @@
+.blog-section {
+    padding: 80px 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.blog-section__title {
+    font-family: var(--font-bebas);
+    font-size: 101px;
+    color: var(--text-color-primary);
+    line-height: 1;
+    margin: 0 0 8px 0;
+}
+
+.blog-section__description {
+    font-family: var(--font-manrope);
+    font-size: 18px;
+    color: var(--text-color-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+}

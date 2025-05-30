@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/blocks/blogCard/blogCard.css">
+<article class="blog-card">
+    <div class="blog-card__image-container">
+        <img src="" alt="" class="blog-card__image" />
+    </div>
+    <div class="blog-card__content">
+        <h3 class="blog-card__subtitle"></h3>
+        <p class="blog-card__description"></p>
+        <div class="blog-card__actions">
+            <div class="blog-card__action-group">
+                <button class="blog-card__icon-button blog-card__icon-button--like" aria-label="Like this post">
+                    <svg width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_210_360)">
+                        <path d="M9.33317 14.6667L14.6665 2.66675C15.7274 2.66675 16.7448 3.08818 17.4949 3.83832C18.2451 4.58847 18.6665 5.60588 18.6665 6.66675V12.0001H26.2132C26.5997 11.9957 26.9826 12.0754 27.3353 12.2337C27.6879 12.392 28.002 12.6251 28.2556 12.9168C28.5093 13.2085 28.6965 13.5518 28.8043 13.9231C28.9121 14.2943 28.9378 14.6846 28.8798 15.0667L27.0398 27.0667C26.9434 27.7026 26.6204 28.2822 26.1304 28.6988C25.6403 29.1153 25.0163 29.3407 24.3732 29.3334H9.33317M9.33317 14.6667V29.3334M9.33317 14.6667H5.33317C4.62593 14.6667 3.94765 14.9477 3.44755 15.4478C2.94746 15.9479 2.6665 16.6262 2.6665 17.3334V26.6667C2.6665 27.374 2.94746 28.0523 3.44755 28.5524C3.94765 29.0525 4.62593 29.3334 5.33317 29.3334H9.33317" stroke="#D3E97A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_210_360" x="-4" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_210_360"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_210_360" result="shape"/>
+                        </filter>
+                        </defs>
+                    </svg>  
+                </button>
+                <button class="blog-card__icon-button blog-card__icon-button--bookmark" aria-label="Bookmark this post">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3332 28L15.9998 21.3333L6.6665 28V6.66667C6.6665 5.95942 6.94746 5.28115 7.44755 4.78105C7.94765 4.28095 8.62593 4 9.33317 4H22.6665C23.3737 4 24.052 4.28095 24.5521 4.78105C25.0522 5.28115 25.3332 5.95942 25.3332 6.66667V28Z" stroke="#D3E97A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </button>
+            </div>
+            <a href="#" target="_blank" class="blog-card__read-full">
+                <span class="blog-card__read-full-content">
+                    READ FULL
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_210_384_card_blog1)"> 
+                        <path d="M5.49048 17.6161L14.9448 8.16172L14.9448 15.0234L16.7779 15.0234L16.7779 5.0323L6.78684 5.0323L6.78684 6.86536L13.6485 6.86536L4.19412 16.3197L5.49048 17.6161Z" fill="#D3E97A"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_210_384_card_blog1">
+                        <rect width="22" height="22" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="blog-card__read-full-line"></span>
+            </a>
+        </div>
+    </div>
+</article>
