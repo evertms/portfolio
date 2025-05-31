@@ -1,0 +1,10 @@
+.search-bar {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}

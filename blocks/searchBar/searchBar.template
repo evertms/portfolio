@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/blocks/searchBar/searchBar.css" />
+<div class="search-bar">
+  <input 
+    class="search-bar__input" 
+    type="text" 
+    placeholder="Ctrl + K to search..."
+  />
+</div>
