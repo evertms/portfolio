@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="/blocks/savedItems/savedItems.css">
+<section class="saved-items">
+    <header class="saved-items__header">
+        <h2 class="saved-items__title">BLOG</h2>
+    </header>
+    <div class="saved-list" id="saved-list"></div>
+</section>

@@ -1,29 +1,21 @@
 import BaseHTMLElement from '../base/BaseHTMLElement.js';
 import { stateService } from '../../services/StateService.js';
+import savedItemsService from '../../services/SavedItemsService.js';
 
 export default class BlogCard extends BaseHTMLElement {
   constructor(blogData) {
-      super();
-      this.blogData = blogData;
-      this.stateService = stateService;
-      stateService.subscribe(this);
+    super();
+    this.blogData = blogData;
+    this.stateService = stateService;
+    this.stateService.subscribe(this);
   }
 
   update(state) {
     const likeBtn = this.shadowRoot.querySelector('.blog-card__icon-button--like');
     const bookmarkBtn = this.shadowRoot.querySelector('.blog-card__icon-button--bookmark');
-    
-    if (state.likes[this.blogData.id]) {
-        likeBtn.classList.add('active');
-    } else {
-        likeBtn.classList.remove('active');
-    }
-    
-    if (state.bookmarks[this.blogData.id]) {
-        bookmarkBtn.classList.add('active');
-    } else {
-        bookmarkBtn.classList.remove('active');
-    }
+
+    if (likeBtn) likeBtn.classList.toggle('active', !!state.likes[this.blogData.id]);
+    if (bookmarkBtn) bookmarkBtn.classList.toggle('active', !!state.bookmarks[this.blogData.id]);
   }
 
   connectedCallback() {
@@ -32,19 +24,25 @@ export default class BlogCard extends BaseHTMLElement {
 
   async load() {
     await this.loadHTML('/blocks/blogCard/blogCard.template');
+    this.update(this.stateService.state);
 
-    this.update(stateService.state);
-    
-    const likeBtn = this.shadowRoot.querySelector('.blog-card__icon-button--like');
     const bookmarkBtn = this.shadowRoot.querySelector('.blog-card__icon-button--bookmark');
-    
-    likeBtn.addEventListener('click', () => {
-      this.stateService.toggleLike(this.blogData.id);
-    });
-    
-    bookmarkBtn.addEventListener('click', () => {
-      this.stateService.toggleBookmark(this.blogData.id);
-    });
+
+    if (bookmarkBtn) {
+      bookmarkBtn.addEventListener('click', () => {
+        const isCurrentlyBookmarked = this.stateService.state.bookmarks[this.blogData.id];
+
+        // Actualiza el estado global de bookmarks
+        if (isCurrentlyBookmarked) {
+          savedItemsService.removeSavedItem(this.blogData.id);
+        } else {
+          savedItemsService.addSavedItem(this.blogData.id);
+        }
+
+        // Sincroniza con StateService para mantener otros estados
+        this.stateService.toggleBookmark(this.blogData.id);
+      });
+    }
 
     // Asignar datos dinámicos
     const img = this.shadowRoot.querySelector('.blog-card__image');
@@ -53,13 +51,18 @@ export default class BlogCard extends BaseHTMLElement {
     const link = this.shadowRoot.querySelector('.blog-card__read-full');
 
     if (this.blogData) {
-      img.src = this.blogData.imagen.src;
-      img.alt = this.blogData.imagen.altImg;
-      title.textContent = this.blogData.titulo;
-      description.textContent = this.blogData.descripcion;
-      link.href = this.blogData.link || 'https://www.linkedin.com/in/evertms/';
+      if (img) {
+        img.src = this.blogData.imagen?.src || '';
+        img.alt = this.blogData.imagen?.altImg || 'Imagen del blog';
+      }
+
+      if (title) title.textContent = this.blogData.titulo || '';
+
+      if (description) description.textContent = this.blogData.descripcion || '';
+
+      if (link) link.href = this.blogData.link || 'https://www.linkedin.com/in/evertms/'; 
     }
-}
+  }
 }
 
 customElements.define('blog-card', BlogCard);
