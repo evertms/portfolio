@@ -2,12 +2,16 @@ import { stateService } from './StateService.js';
 
 export const Router = {
   init: () => {
-      document.querySelectorAll('.header__nav-link').forEach((a) => {
-          a.addEventListener('click', (event) => {
-              event.preventDefault();
-              const url = event.target.getAttribute('href');
-              Router.go(url);
-          });
+      /* Use event delegation so any <a> added later (like the contact button in
+         the home template) will automatically be handled.  We listen on the body
+         and match anchors whose href starts with '/'. */
+      document.body.addEventListener('click', (event) => {
+          const anchor = event.target.closest('a[href^="/"]');
+          if (!anchor) return; // not an internal link
+
+          event.preventDefault();
+          const url = anchor.getAttribute('href');
+          Router.go(url);
       });
 
       window.addEventListener('popstate', (event) => {

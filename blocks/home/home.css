@@ -102,6 +102,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.home__profile-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: bottom;
+  z-index: 1;
 }
 
 @media (max-width: 1024px) {
